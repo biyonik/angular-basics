@@ -12,10 +12,6 @@ export class AppComponent implements OnInit {
 
   }
 
-  private title: string = 'Angular Temelleri';
-
-  get Title() {return this.title; }
-
   ngOnInit(): void {
 
     /** spinner starts on init */

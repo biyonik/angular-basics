@@ -1,0 +1,30 @@
+<igx-nav-drawer id="navigation" #drawer [isOpen]="false" [pin]="true" [pinThreshold]="5000">
+  <ng-template igxDrawer>
+    <nav>
+      <span igxDrawerItem [isHeader]="true">Menü</span>
+
+      <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)" [routerLink]="item.route">
+        <span>{{ item.text }}</span>
+      </span>
+    </nav>
+  </ng-template>
+</igx-nav-drawer>
+<!-- <ul>
+  <li>
+    <a routerLink="home">Home</a>
+  </li>
+  <li>
+    <a routerLink="role">Role</a>
+  </li>
+  <li>
+    <a routerLink="user">User</a>
+    <ul>
+      <li>
+        <a [routerLink]="['user', 5]">Detail</a>
+      </li>
+      <li>
+        <a [routerLink]="['user', 5, 'role']">Roles</a>
+      </li>
+    </ul>
+  </li>
+</ul> -->
