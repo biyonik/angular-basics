@@ -19,11 +19,13 @@
 <div class="container">
   <div class="row">
     <aside class="col-md-3">
-      Aside
-      <button igxButton="flat">Flat Ignite Button</button>
+      <h2 routerLink="home">Home</h2>
+      <h2 routerLink="role">Role</h2>
+      <h2 routerLink="user">User</h2>
+      <h2 [routerLink]="['user', 2]">User Detail</h2>
     </aside>
     <section class="col-md-9">
-      Section
+      <router-outlet></router-outlet>
     </section>
   </div>
 </div>
