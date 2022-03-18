@@ -19,6 +19,7 @@ export class SidebarComponent implements OnInit {
     {name: 'verified-account', text: 'Directives', route:'directives'},
     {name: 'verified-account', text: 'Pipes', route:'pipes'},
     {name: 'verified-account', text: 'Parents', route:'parent'},
+    {name: 'verified-account', text: 'Forms', route:'forms'},
   ];
 
   public selected: string = 'Home';

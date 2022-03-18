@@ -1,0 +1,35 @@
+<!-- <div class="container">
+  <h1>Kayıt Formu</h1>
+  <form (ngSubmit)="save(registerForm)" #registerForm="ngForm">
+    <div class="form-group">
+      <label for="name">İsim</label>
+      <input type="text" name="name" id="name" title="İsim" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="age">Yaş</label>
+      <input type="number" name="age" id="age" title="Yaş" ngModel>
+    </div>
+    <button class="mt-2 btn btn-outline-primary" type="submit">Kayıt Ol</button>
+  </form>
+</div> -->
+
+<div class="row">
+  <h2>Reactive Forms Register</h2>
+  <div class="col-md-12">
+    <form [formGroup]="registerForm" (ngSubmit)="saveForm(registerForm)">
+      <div class="form-group row mt-2">
+        <label for="username" class="col-md-3">Kullanıcı Adı</label>
+        <div class="col-md-9">
+          <input type="text" class="col-md-9 form-control" formControlName="username" id="username">
+        </div>
+      </div>
+      <div class="form-group row mt-2">
+        <label for="age" class="col-md-3">Yaş</label>
+        <div class="col-md-9">
+          <input type="text" class="col-md-9 form-control" formControlName="age" id="age">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-primary offset-3 mt-2">Kayıt Ol</button>
+    </form>
+  </div>
+</div>
