@@ -1,0 +1,19 @@
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+$white-color: #dedede;
+$black-color: #151515;
+$light-navbar-palette: palette($primary: $white-color, $secondary: $black-color);
+
+$custom-navbar-theme: navbar-theme(
+    $text-color: color($light-navbar-palette, "secondary", 400),
+    $background: color($light-navbar-palette, "primary", 400),
+    $idle-icon-color: color($light-navbar-palette, "secondary", 400),
+    $hover-icon-color: #8c8c8c
+);
+
+
+:host ::ng-deep {
+  @include navbar($custom-navbar-theme);
+}
+// @include igx-core();

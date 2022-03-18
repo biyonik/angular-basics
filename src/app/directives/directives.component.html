@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <h2>Angular Directives</h2>
+</div>
+<h3>Structural Directives</h3>
+<div class="row">
+  <div class="col-md-4">
+    <h4>*ngIf Direktifi</h4>
+    <input type="text" [(ngModel)]="name">
+    <p *ngIf="hasTitle">Title var</p>
+    <p *ngIf="name === 'Ahmet'">{{name}}</p>
+    <button (click)="changeTitle()">Toggle</button>
+
+    <hr>
+    <div *ngIf="hasTitle; then titleExist; else titleNotExist;">
+    </div>
+    <ng-template #titleExist>
+      Title var aga...!
+    </ng-template>
+    <ng-template #titleNotExist>
+      Title YOK aga...!
+    </ng-template>
+  </div>
+
+  <div class="col-md-4">
+    <h4>ngSwitch Direktifi</h4>
+    <input type="text" name="username" [(ngModel)]="username" autocomplete="off">
+    <ul [ngSwitch]="username">
+      <li *ngSwitchCase="'Ahmet'">Hello Ahmet</li>
+      <li *ngSwitchCase="'Uğur'">Hello Uğur</li>
+      <li *ngSwitchDefault>Hello Everyone</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Custom Directives</h3>
+<div class="row">
+  <div class="col-md-6">
+    <p appHighlight>Hightlight Directive Works!</p>
+  </div>
+</div>

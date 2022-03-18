@@ -8,11 +8,12 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { IgxButtonModule, IgxIconModule, IgxNavbarModule, IgxNavigationDrawerModule, IgxNavigationService } from 'igniteui-angular';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SidebarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +24,8 @@ import { IgxButtonModule, IgxIconModule, IgxNavbarModule, IgxNavigationDrawerMod
     IgxNavbarModule,
     IgxIconModule,
     IgxNavigationDrawerModule,
-    IgxButtonModule
+    IgxButtonModule,
+    FormsModule
   ],
   providers: [
     IgxNavigationService

@@ -13,7 +13,12 @@ export class SidebarComponent implements OnInit {
   public navItems = [
     {name: 'home', text: 'Home', route: 'home'},
     {name: 'git-merge', text: 'Role', route: 'role'},
-    {name: 'verified-account', text: 'User', route:'user'}
+    {name: 'verified-account', text: 'User', route:'user'},
+    {name: 'verified-account', text: 'Data-Binding', route:'data-binding'},
+    {name: 'verified-account', text: 'Storage', route:'storage'},
+    {name: 'verified-account', text: 'Directives', route:'directives'},
+    {name: 'verified-account', text: 'Pipes', route:'pipes'},
+    {name: 'verified-account', text: 'Parents', route:'parent'},
   ];
 
   public selected: string = 'Home';

@@ -1,0 +1,8 @@
+<p>First Parent Components</p>
+
+<label for="name">İsim: </label>
+<input type="text" [(ngModel)]="name" name="name" id="name" title="Name">
+<p>Data-Binding olarak sonuç: {{name}}</p>
+<hr>
+<h2>Child Component: </h2>
+<app-first-child [nameValue]="name"></app-first-child>

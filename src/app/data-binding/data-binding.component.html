@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>One Way Binging <span style="font-size: 0.9rem">from Component to DOM</span></h3>
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Interpolation</h4>
+        <p>Firstname: {{User.firstName}}</p>
+        <p>Lastname: {{User.lastName}}</p>
+        <p>Job: {{User.job}}</p>
+        <div>
+          <img [src]="User.pictureUrl" alt="{{User.firstName}}">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4>Property Binding</h4>
+        <label>
+          <input [type]="inputType" [placeholder]="placeHolder" [title]="inputTitle" class="form-control" />
+        </label>
+      </div>
+      <div class="col-md-4">
+        <h4>Attribute Binding</h4>
+        <label>
+          <input [type]="inputType" [placeholder]="placeHolder" [(ngModel)]="FirstName" [attr.disabled]="!canEditable ? 'disabled' : null">
+        </label>
+        <button (click)="changeEditable()" class="btn btn-outline-primary">Change Editable</button>
+      </div>
+      <div class="col-md-4">
+        <h4>Class Binding</h4>
+        <p [class.tomato]="canEditable">Tomato</p>
+      </div>
+    </div>
+  </div>
+</div>

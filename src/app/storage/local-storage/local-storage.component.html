@@ -1,0 +1,23 @@
+<h2>Local Storage Component Index</h2>
+<div class="row">
+  <div class="col-md-12">
+    <label for="name"></label>
+    <input type="text" [(ngModel)]="name" id="name" name="name" placeholder="name" ngDefaultControl />
+    <p>NgModel Prop: (name) = {{name}}</p>
+    <p>Local Storage Value: <span [(ngModel)]="localStorageValue">{{localStorageValue}}</span></p>
+    <hr>
+    <label for="key">
+      Key
+    </label>
+    <input type="text" #key name="key" id="key" ngDefaultControl>
+    <label for="value">
+      Value
+    </label>
+    <input type="text" #value name="value" id="value" ngDefaultControl>
+
+    <button class="btn btn-primary" (click)="setItem(key.value, value.value)">Set Item</button>
+    <button class="btn btn-success" (click)="getItem(key.value)">Get Item</button>
+    <button class="btn btn-warning" (click)="clearItem(key.value)">Clear Item</button>
+    <button class="btn btn-danger" (click)="clearAll()">Clear All</button>
+  </div>
+</div>
